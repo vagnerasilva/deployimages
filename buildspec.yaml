@@ -5,13 +5,14 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
+      - aws ecr get-login-password
       #- $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=080835854471.dkr.ecr.us-east-1.amazonaws.com/ssi
       #- COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       #- IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
       - ls -d */
       - echo " "
-      - echo "## Build Done ##"
+      - echo "## Build Done "
   build:
     commands:
       #- echo Build started on `date`
