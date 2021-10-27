@@ -9,7 +9,8 @@ phases:
       - REPOSITORY_URI=080835854471.dkr.ecr.us-east-1.amazonaws.com/ssi
       #- COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       #- IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
-       for i in $(ls -d */); 
+      - ls -d */
+      - for i in $(ls -d */); 
          do 
           #echo ${i:0:-1} # Removendo "/" da ultima posicao da string
          echo "## START ##"
