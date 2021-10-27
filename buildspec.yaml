@@ -10,21 +10,8 @@ phases:
       #- COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       #- IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
       - ls -d */
-      - for i in $(ls -d */); 
-         do 
-          #echo ${i:0:-1} # Removendo "/" da ultima posicao da string
-         echo "## START ##"
-         echo " "
-          
-         VALUE2="${i:0:-1}/Dockerfile ."   # criando nome da imagem a ser buildada
-         VALUE1="container-${i:0:-1}"      # criando nome do container que sera utilizado  
-          
-         echo ${VALUE2}
-         echo ${VALUE1}
-         docker build -t ${VALUE1} -f ${VALUE2}   # Realizando build dos containers com o nome das pastas e dockerfiles em cada uma delas 
-          #echo ${VALUE1} ${REGISTRY}/${VALUE1}:${VERSION}
-      -   echo " "
-      -   echo "## Build Done ##"
+      - echo " "
+      - echo "## Build Done ##"
   build:
     commands:
       #- echo Build started on `date`
