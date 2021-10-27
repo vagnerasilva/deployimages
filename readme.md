@@ -1,0 +1,1 @@
+Deploy simultaneo das imagens cloudformation
