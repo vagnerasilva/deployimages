@@ -8,13 +8,13 @@ phases:
       #- aws ecr get-login-password
       #- $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=080835854471.dkr.ecr.us-east-1.amazonaws.com/ssi
-      - echo $REPOSITORY_URI
-      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-      - echo $CODEBUILD_BUILD_ID
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
-      - echo $IMAGE_TAG
-      - echo $COMMIT_HASH
+      #- echo $REPOSITORY_URI
+      #- echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      #- echo $CODEBUILD_BUILD_ID
+      #- COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      #- IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
+      #- echo $IMAGE_TAG
+      #- echo $COMMIT_HASH
       - echo " Lista de Pastas"
       - ls -d
       - echo " "
@@ -23,7 +23,7 @@ phases:
           do
               echo $value;
               VALUE2=build-$(echo $value );
-              echo $VALUE2
+              echo $VALUE2;
           done
       - echo "## Build Done "
   build:
