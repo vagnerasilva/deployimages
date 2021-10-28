@@ -28,7 +28,7 @@ phases:
               echo "caminho da pasta";
               echo $VALUE2;
               docker build -t $VALUE1 -f $VALUE2 . ;
-              docker tag $VALUE1 $REPOSITORY_URI/$VALUE1:$VERSION 
+              docker tag $VALUE1 $REPOSITORY_URI/$VALUE1:$VERSION ;
           done
       - echo "## Build Done "
   build:
