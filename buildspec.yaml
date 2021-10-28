@@ -21,7 +21,7 @@ phases:
       - for value in $folders;
           do
               echo $value;
-              echo lkj | rev | cut -c 2- | rev;
+              echo $value | rev | cut -c 2- | rev;
               VALUE2=build-$(echo $value );
               echo $VALUE2;
           done
