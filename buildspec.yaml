@@ -22,7 +22,7 @@ phases:
           do
               VALUE2=$(echo $value | rev | cut -c 2- | rev)/Dockerfile .;
               echo $VALUE1;
-              VALUE1=container-$(echo $VALUE1 );
+              VALUE1=container-$(echo $(echo $value | rev | cut -c 2- | rev) );
               echo $VALUE1;
               echo $VALUE2;
           done
