@@ -20,7 +20,8 @@ phases:
       - folders=`ls -d */`
       - for value in $folders;
           do
-              VALUE1=$value | rev | cut -c 2- | rev;
+              VALUE1=$(echo $value | rev | cut -c 2- | rev);
+              echo $VALUE1;
               VALUE2=container-$(echo $VALUE1 );
               echo $VALUE2;
           done
