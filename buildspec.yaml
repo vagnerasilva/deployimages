@@ -25,7 +25,7 @@ phases:
               VALUE1=container-$(echo $(echo $value | rev | cut -c 2- | rev) );
               echo $VALUE1;
               echo $VALUE2;
-              TESTE=docker build -t $(echo $VALUE1) -f $(echo $VALUE2) . ;
+              TESTE=docker build -t $(echo $VALUE1);
               echo $TESTE;
           done
       - echo "## Build Done "
