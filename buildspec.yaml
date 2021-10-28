@@ -21,9 +21,10 @@ phases:
       - for value in $folders;
           do
               VALUE2=$(echo $value | rev | cut -c 2- | rev)/Dockerfile;
-              echo $VALUE1;
               VALUE1=container-$(echo $(echo $value | rev | cut -c 2- | rev) );
+              echo "nome do container";
               echo $VALUE1;
+              echo "caminho da pasta";
               echo $VALUE2;
           done
       - echo "## Build Done "
