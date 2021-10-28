@@ -20,9 +20,9 @@ phases:
       - echo " "
       - folders=`ls`
       - for value in $folders;
-        do
-            echo $value
-        done
+          do
+              echo $value;
+          done
       - echo "## Build Done "
   build:
     commands:
