@@ -21,9 +21,7 @@ phases:
       - folders=`ls`
       - for value in $folders;
         do
-            echo $value;
-            #VALUE1=$(echo $value )
-            #echo $VALUE1
+            echo $value
         done
       - echo "## Build Done "
   build:
