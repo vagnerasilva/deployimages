@@ -20,12 +20,13 @@ phases:
       - folders=`ls -d */`
       - for value in $folders;
           do
-              VALUE2=$(echo $value | rev | cut -c 2- | rev)/Dockerfile .;
+              VALUE2=$(echo $value | rev | cut -c 2- | rev)/Dockerfile;
               echo $VALUE1;
               VALUE1=container-$(echo $(echo $value | rev | cut -c 2- | rev) );
               echo $VALUE1;
               echo $VALUE2;
-              docker build -t $(echo $VALUE1) -f $(echo $VALUE2) ;
+              TESTE=docker build -t $(echo $VALUE1) -f $(echo $VALUE2) . ;
+              echo $TESTE;
           done
       - echo "## Build Done "
   build:
