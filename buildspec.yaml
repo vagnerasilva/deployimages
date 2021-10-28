@@ -18,10 +18,10 @@ phases:
       - echo " Lista de Pastas"
       - ls -d */
       - echo " "
-      - folders=`ls`
+      - folders=`ls -d */`
       - for value in $folders;
         do
-            echo $value;
+            echo ${value:0:-1};
         done
       - echo "run the next command"
       - echo "## Build Done "
