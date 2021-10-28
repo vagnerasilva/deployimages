@@ -18,7 +18,7 @@ phases:
       - echo " Lista de Pastas"
       - ls -d
       - echo " "
-      - folders=`ls -d */`
+      - folders=`ls`
       - for value in $folders;
         do
             echo $value;
