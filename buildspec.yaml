@@ -15,14 +15,13 @@ phases:
       #- IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
       #- echo $IMAGE_TAG
       #- echo $COMMIT_HASH
-      - echo " Lista de Pastas"
+      - echo " Lista de Pastas "
       - echo " "
       - folders=`ls -d */`
       - for value in $folders;
           do
-              echo $value;
-              echo $value | rev | cut -c 2- | rev;
-              VALUE2=build-$(echo $value );
+              VALUE1=$value | rev | cut -c 2- | rev;
+              VALUE2=build-$(echo VALUE1 );
               echo $VALUE2;
           done
       - echo "## Build Done "
