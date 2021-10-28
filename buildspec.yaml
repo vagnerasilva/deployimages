@@ -21,7 +21,9 @@ phases:
       - folders=`ls -d */`
       - for value in $folders;
         do
-            echo $value ;
+            echo $value;
+            VALUE1="container-${value:0:-1}"
+            echo $VALUE1
         done
       - echo "run the next command"
       - echo "## Build Done "
