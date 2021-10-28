@@ -16,16 +16,15 @@ phases:
       - echo $IMAGE_TAG
       - echo $COMMIT_HASH
       - echo " Lista de Pastas"
-      - ls -d */
+      - ls -d
       - echo " "
       - folders=`ls -d */`
       - for value in $folders;
         do
             echo $value;
-            VALUE1="container-${value:0:-1}"
+            VALUE1="container-$value"
             echo $VALUE1
         done
-      - echo "run the next command"
       - echo "## Build Done "
   build:
     commands:
