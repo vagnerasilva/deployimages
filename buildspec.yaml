@@ -6,6 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       #- aws ecr get-login-password
+      - VERSION="latest"
       #- $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=080835854471.dkr.ecr.us-east-1.amazonaws.com/ssi
       #- echo $REPOSITORY_URI
@@ -27,6 +28,7 @@ phases:
               echo "caminho da pasta";
               echo $VALUE2;
               docker build -t $VALUE1 -f $VALUE2 . ;
+              docker tag $VALUE1 $REPOSITORY_URI/$VALUE1:$VERSION 
           done
       - echo "## Build Done "
   build:
