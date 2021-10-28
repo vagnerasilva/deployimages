@@ -23,6 +23,7 @@ phases:
               echo $value;
               VALUE2=build-$(echo $value );
               echo $VALUE2;
+              echo ${VALUE2:0:-1};
           done
       - echo "## Build Done "
   build:
