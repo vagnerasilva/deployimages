@@ -16,9 +16,8 @@ phases:
       #- echo $IMAGE_TAG
       #- echo $COMMIT_HASH
       - echo " Lista de Pastas"
-      - ls -d
       - echo " "
-      - folders=`ls -d`
+      - folders=`ls -d */`
       - for value in $folders;
           do
               echo $value;
