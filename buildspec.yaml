@@ -22,7 +22,7 @@ phases:
       - for value in $folders;
         do
             echo $value;
-            VALUE1=$(echo $value | cut -c 1-7)`
+            VALUE1=$(echo $value )
             echo $VALUE1
         done
       - echo "## Build Done "
