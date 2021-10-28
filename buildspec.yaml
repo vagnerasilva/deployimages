@@ -26,6 +26,7 @@ phases:
               echo $VALUE1;
               echo "caminho da pasta";
               echo $VALUE2;
+              docker build -t $(echo $VALUE1) .;
           done
       - echo "## Build Done "
   build:
