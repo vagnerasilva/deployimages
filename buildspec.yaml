@@ -22,7 +22,7 @@ phases:
       - for value in $folders;
         do
             echo $value;
-            VALUE1="container-$value"
+            VALUE1=`container-${value}`
             echo $VALUE1
         done
       - echo "## Build Done "
