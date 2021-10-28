@@ -22,8 +22,8 @@ phases:
       - for value in $folders;
         do
             echo $value;
-            VALUE1=$(echo $value )
-            echo $VALUE1
+            #VALUE1=$(echo $value )
+            #echo $VALUE1
         done
       - echo "## Build Done "
   build:
