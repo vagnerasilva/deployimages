@@ -21,7 +21,7 @@ phases:
       - folders=`ls -d */`
       - for value in $folders;
         do
-            echo ${value:0:-1};
+            echo $value ;
         done
       - echo "run the next command"
       - echo "## Build Done "
